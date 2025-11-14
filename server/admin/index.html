@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Admin Dashboard</title>
+    <script src="https://cdn.socket.io/4.7.5/socket.io.min.js"></script>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+      }
+      h2 {
+        margin-top: 2em;
+      }
+      pre {
+        background: #f4f4f4;
+        padding: 1em;
+        border-radius: 4px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Admin Dashboard</h1>
+    <h2>Players</h2>
+    <pre id="players"></pre>
+    <h2>Rooms</h2>
+    <pre id="rooms"></pre>
+
+    <script>
+      const socket = io("http://localhost:8080");
+
+      // Request data from server
+      socket.emit("admin-request");
+
+      // Listen for admin data
+      socket.on("admin-data", function (data) {
+        document.getElementById("players").textContent = JSON.stringify(
+          data.players,
+          null,
+          2
+        );
+        document.getElementById("rooms").textContent = JSON.stringify(
+          data.rooms,
+          null,
+          2
+        );
+      });
+      setInterval(() => {
+        socket.emit("admin-request");
+      }, 1000);
+    </script>
+  </body>
+</html>

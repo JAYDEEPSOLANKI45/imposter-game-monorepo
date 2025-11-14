@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "target": "ES2019",
+    "module": "CommonJS",
+    "declaration": true,          // emit .d.ts files (for type definitions)
+    "outDir": "../dist/shared",   // compiled JS output
+    "rootDir": "../",               // source files root
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "composite": true             // required for project references
+  },
+  "include": ["**/*.ts"]
+}
