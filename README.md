@@ -1,18 +1,18 @@
-# Imposter — local multiplayer bluffing game (dev workspace)
+# Imposter - Online multiplayer bluffing game (dev workspace)
 
 Short README to get contributors or testers up and running quickly. This repo contains a Vite + React TypeScript client, a Node/Express + Socket.IO server, and a small shared folder with types.
 
 ## Contents
 
-- `client/` — Vite + React (TypeScript) single-page app. Dev server serves the UI.
-- `server/` — Node (Express) + Socket.IO server that manages rooms, players, rounds and timers.
-- `shared/` — shared types and small helpers used by both client and server.
+- `client/` - Vite + React (TypeScript) single-page app. Dev server serves the UI.
+- `server/` - Node (Express) + Socket.IO server that manages rooms, players, rounds and timers.
+- `shared/` - shared types and small helpers used by both client and server.
 
 ## Tech stack
 
 - Client: React + TypeScript, Vite, socket.io-client
 - Server: Node.js, Express, Socket.IO (server)
-- Communication: Socket.IO (real-time events — prompt/vote/game lifecycle)
+- Communication: Socket.IO (real-time events - prompt/vote/game lifecycle)
 
 ## Prerequisites
 
