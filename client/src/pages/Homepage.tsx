@@ -16,7 +16,6 @@ const Homepage = () => {
     setFlash,
     setResult,
   } = useContext(AppContext);
-  let warning;
   const navigate = useNavigate();
 
   useEffect(() => {
